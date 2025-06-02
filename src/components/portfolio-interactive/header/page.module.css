@@ -1,0 +1,87 @@
+/* components/UbuntuHeader.module.css */
+
+.header {
+    grid-row: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem; /* Aumentei um pouco a altura para acomodar botões */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem; /* Padding horizontal */
+    z-index: 50; /* Garante que fique acima de outros elementos */
+
+    background-color: var(--header-fixed-bg); /* AGORA USA A NOVA VARIÁVEL FIXA */
+    color: var(--header-fixed-text); /* AGORA USA A NOVA VARIÁVEL FIXA PARA O TEXTO */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra mais suave e moderna */
+    /* border-bottom: 1px solid var(--window-border); Borda inferior sutil */
+    backdrop-filter: blur(8px); /* Efeito de blur para o fundo semitransparente */
+    -webkit-backdrop-filter: blur(8px); /* Para compatibilidade com Safari */
+}
+
+/* O resto do CSS permanece o mesmo */
+.leftSection,
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Espaçamento entre os itens */
+}
+
+.centerSection {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.375rem; /* rounded-md */
+    cursor: pointer;
+    color: var(--header-fixed-text); /* AGORA USA A NOVA VARIÁVEL FIXA PARA O TEXTO DOS BOTÕES */
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: flex; /* Para alinhar ícones e texto */
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem; /* Tamanho da fonte para botões */
+}
+
+.button:hover {
+    background-color: var(--button-hover-bg); /* Efeito de hover */
+    color: var(--accent); /* Um toque da cor de destaque no hover do texto/ícone */
+}
+
+.iconButton {
+    font-size: 1.1rem; /* Tamanho para ícones */
+    width: 2rem; /* Largura fixa para botões de ícone */
+    height: 2rem; /* Altura fixa para botões de ícone */
+}
+
+/* Esconder botões em telas menores */
+@media (max-width: 768px) {
+    .activitiesButton {
+        display: none;
+    }
+}
+
+/* Tamanho do texto para relógio em telas menores */
+@media (max-width: 480px) {
+    .dateTime {
+        font-size: 0.75rem; /* text-xs */
+    }
+}
+
+/* Estilos para o ícone do tema */
+.themeIcon {
+    font-size: 1.25rem; /* Um pouco maior para o ícone de tema */
+}
+
+/* Estilos para o ícone de fullscreen */
+.fullscreenIcon {
+    font-size: 1.25rem; /* Um pouco maior para o ícone de fullscreen */
+}

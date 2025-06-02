@@ -1,0 +1,110 @@
+/* UsersLogin.module.css */
+
+.loginContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem; /* p-4 */
+    overflow: hidden;
+    /* Cores FIXAS para esta tela */
+    background-color: #0A021F; /* Fundo principal da tela (Dark background da sua paleta) */
+    color: #E8EAF6; /* Cor de texto padrão (Dark text-primary da sua paleta) */
+}
+
+.cardGrid {
+    display: flex;
+    gap: 2.5rem; /* gap-10 */
+    flex-wrap: wrap; /* Para lidar com telas menores */
+    justify-content: center; /* Centraliza os cards quando quebram a linha */
+}
+
+.userCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem; /* p-6 */
+    width: 11rem; /* w-44 */
+    border-radius: 0.75rem; /* rounded-lg */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transição para todas as propriedades */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra inicial mais escura para contraste */
+    position: relative; /* Para o spinner e z-index */
+
+    /* Cores FIXAS para o card */
+    background-color: #1C0F4A; /* Fundo do card (Dark surface da sua paleta) */
+    border: 1px solid #3F51B5; /* Borda do card (Dark surface-border da sua paleta) */
+    color: #E8EAF6; /* Cor do texto no card (Dark text-primary da sua paleta) */
+}
+
+/* Estado de hover */
+.userCard:not(.selected):hover {
+    transform: translateY(-5px); /* Leve elevação no hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra mais forte no hover */
+    border-color: #7C4DFF; /* Borda destacada no hover (Dark accent da sua paleta) */
+}
+
+/* Estado selecionado */
+.userCard.selected {
+    border-color: #7C4DFF; /* Cor do anel de seleção (Dark accent da sua paleta) */
+    box-shadow: 0 0 0 4px #7C4DFF; /* ring-4 */
+    z-index: 10;
+    transform: scale(1.05); /* Levemente maior quando selecionado */
+}
+
+/* Estado oculto (outro card selecionado) */
+.userCard.hidden {
+    opacity: 0 !important; /* Força a opacidade para 0 */
+    transform: scale(0.8) !important; /* Encolhe quando hidden */
+}
+
+/* Estilos para os ícones */
+.userIcon {
+    font-size: 4rem; /* size-64 */
+    color: #BBDEFB; /* Cor padrão dos ícones (Dark text-secondary da sua paleta) */
+    margin-bottom: 1rem; /* Ajuste para espaçamento */
+}
+
+/* Se você quiser que o ícone do terminal seja diferente do padrão dos ícones */
+.terminalIcon {
+    color: #7C4DFF; /* Cor específica para o ícone do terminal (Dark accent da sua paleta) */
+}
+
+/* Se você quiser que o ícone do user-circle seja diferente do padrão dos ícones */
+.userCircleIcon {
+     color: #7C4DFF; /* Cor específica para o ícone do usuário (Dark accent da sua paleta) */
+}
+
+
+/* Título do card */
+.cardTitle {
+    margin-top: 1rem; /* mt-4 */
+    font-weight: 600; /* font-semibold */
+    color: #E8EAF6; /* Cor do título (Dark text-primary da sua paleta) */
+    text-align: center;
+}
+
+/* Descrição do card */
+.cardDescription {
+    margin-top: 0.25rem; /* mt-1 */
+    font-size: 0.875rem; /* text-sm */
+    color: #BBDEFB; /* Cor da descrição (Dark text-secondary da sua paleta) */
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Spinner de loading */
+.loadingSpinner {
+    margin-bottom: 1rem; /* mb-4 */
+    color: #7C4DFF; /* Cor do spinner (Dark accent da sua paleta) */
+    animation: spin 1s linear infinite; /* Animação de giro */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,160 @@
+/* page.module.css */
+
+.section {
+    padding: 4rem 1rem;
+    background-color: var(--background); /* Usando a variável de background */
+    color: var(--text-primary); /* Cor do texto principal */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-primary); /* Cor do título */
+}
+
+.titleHighlight {
+    color: var(--accent); /* Cor de destaque para o título */
+}
+
+.titleMd {
+    font-size: 3rem;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .flexLgRow {
+        flex-direction: row;
+        gap: 4rem;
+    }
+}
+
+.card {
+    background-color: var(--surface); /* Cor de fundo dos cartões */
+    border: 1px solid var(--surface-border); /* Borda sutil nos cartões */
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    flex-grow: 1;
+}
+
+.imageWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.profileImageContainer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent); /* Borda na imagem de perfil */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary); /* Cor do nome */
+}
+
+.subtitle {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--text-secondary); /* Cor do subtítulo */
+    margin-bottom: 2rem;
+}
+
+.heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary); /* Cor dos cabeçalhos */
+}
+
+.paragraph {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: var(--text-primary); /* Cor do parágrafo */
+}
+
+.paragraphStrong {
+    font-weight: 600;
+    color: var(--accent); /* Destaque em parágrafos */
+}
+
+.experienceList {
+    list-style: none;
+    padding: 0;
+}
+
+.experienceList li {
+    margin-bottom: 1.5rem;
+}
+
+.experienceItemTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--accent); /* Cor do título da experiência */
+    margin-bottom: 0.5rem;
+}
+
+.experienceItemDesc p {
+    font-size: 1rem;
+    color: var(--text-secondary); /* Cor da descrição da experiência */
+    margin-bottom: 0.25rem;
+}
+
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skillBadge {
+    background-color: var(--accent-hover); /* Cor de fundo dos badges de skill */
+    color: var(--window-header-text); /* Cor do texto dos badges, normalmente branco para contraste */
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.contactButtonWrapper {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.contactButton {
+    display: inline-block;
+    background-color: var(--accent); /* Cor de fundo do botão de contato */
+    color: var(--window-header-text); /* Cor do texto do botão, geralmente branco */
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contactButton:hover {
+    background-color: var(--accent-hover); /* Cor de hover do botão */
+}

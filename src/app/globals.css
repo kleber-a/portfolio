@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+/* 
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -17,10 +17,218 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
 }
+
+/* @font-face {
+  font-family: 'ms_sans_serif';
+  src: url('${ms_sans_serif}') format('woff2');
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'ms_sans_serif';
+  src: url('${ms_sans_serif_bold}') format('woff2');
+  font-weight: bold;
+  font-style: normal
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: 'ms_sans_serif';
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  background-color: #2e3440; /* Um fundo escuro para simular um desktop Linux */
+  /* color: #eceff4; */
+  overflow: hidden; /* Evita scroll na página principal */
+}
+
+/* Definições de cores padrão (modo claro como default ou fallback) */
+:root {
+  --accent: #512DA8; /* Um roxo índigo profundo e forte, puxando para o azul */
+  --accent-hover: #311B92; /* Um roxo ainda mais escuro para o hover */
+  --background: #EDE7F6; /* Um lavanda muito claro, quase branco, para um fundo suave */
+  --surface: #FFFFFF; /* Superfícies brancas e limpas */
+  --surface-border: #D1C4E9; /* Borda sutil em tom lavanda */
+  /* --text-primary: #1A237E; */
+  --text-primary: #1A237E;
+  --text-secondary: #5C6BC0; /* Azul médio para textos secundários */
+  /* --desktop-bg: #C5CAE9; Um fundo de desktop que complementa o background, puxando para o azul-lavanda */
+  --desktop-bg: #FFFF;
+  --desktop-bg-reverse: #050110;
+  /* --desktop-bg: #EDE7F6; */
+  /* --desktop-bg-reverse: #050110; */
+  --desktop-text: var(--text-primary);
+  --taskbar-bg: rgba(255, 255, 255, 0.9); /* Barra de tarefas quase opaca para clareza */
+  --taskbar-text: #283593; /* Um azul escuro para o texto da barra de tarefas */
+  --window-bg: var(--surface);
+  --window-border: var(--surface-border);
+  --window-header-bg: var(--accent);
+  --window-header-text: #FFFFFF; /* Texto branco no cabeçalho para alto contraste */
+  --window-content-text: var(--text-primary);
+  --button-hover-bg: rgba(0, 0, 0, 0.08); /* Efeito de hover um pouco mais forte */
+
+  --header-fixed-bg: rgba(30, 0, 60, 0.9); /* Um roxo bem escuro/índigo profundo, semi-transparente */
+  --header-fixed-text: #f0f0f0;
+}
+/* 🌙 Dark Mode — Noturno e Elegante */
+body.dark-mode {
+  --accent: #7C4DFF; /* Um roxo violeta luminoso e vibrante para o dark mode */
+  --accent-hover: #651FFF; /* Um tom mais escuro e intenso de roxo no hover */
+  --background: #0A021F; /* Um azul muito escuro, quase preto, para o fundo */
+  /* --background: 224 71.4% 4.1%; */
+  --surface: #1C0F4A; /* Um roxo índigo escuro para as superfícies */
+  --surface-border: #3F51B5; /* Borda que contrasta bem em tom azul-violeta */
+  --text-primary: #E8EAF6; /* Azul lavanda suave para o texto principal */
+  --text-secondary: #BBDEFB; /* Azul claro para textos secundários */
+  --desktop-bg: #050110;
+  --desktop-bg-reverse: #FFFF; 
+  /* --desktop-bg: #050110;  */
+  /* --desktop-bg-reverse: #EDE7F6;  */
+  --desktop-text: var(--text-primary);
+  --taskbar-bg: rgba(28, 15, 74, 0.9); /* Barra de tarefas opaca e integrada */
+  --taskbar-text: #C5CAE9; /* Lavanda claro para o texto da barra de tarefas */
+  --window-bg: var(--surface);
+  --window-border: var(--surface-border);
+  --window-header-bg: var(--accent);
+  --window-header-text: #FFFFFF;
+  --window-content-text: var(--text-primary);
+  --button-hover-bg: rgba(255, 255, 255, 0.07); /* Hover sutil no dark mode */
+
+  --header-fixed-bg: rgba(30, 0, 60, 0.9); /* Exatamente o mesmo tom de roxo profundo */
+  --header-fixed-text: #f0f0f0;
+}
+
+/* Aplica as variáveis em seus seletores */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  background-color: var(--desktop-bg); /* Usa a variável para o fundo do body */
+  color: var(--desktop-text); /* Usa a variável para a cor do texto do body */
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.window {
+  background: var(--window-bg);
+  border: 1px solid var(--window-border);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.window-header {
+  background: var(--window-header-bg);
+  padding: 8px 12px;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--window-border);
+  color: var(--window-header-text); /* Usa a variável para a cor do texto do cabeçalho */
+  font-weight: bold;
+}
+
+.window-content {
+  flex-grow: 1;
+  /* padding: 15px; */
+  overflow: auto;
+  color: var(--window-content-text); /* Usa a variável para a cor do texto do conteúdo */
+}
+
+.window-controls button {
+  background: none;
+  border: none;
+  color: var(--button-text);
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: 5px;
+  padding: 0 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.window-controls button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Estilos para a barra de tarefas no page.tsx */
+.taskbar {
+  background: var(--taskbar-bg);
+  color: var(--taskbar-text);
+}
+.window-minimized {
+  /* Estilo quando a janela está minimizada (simulando um ícone de pasta) */
+  background: var(--desktop-bg); /* Fundo similar ao desktop */
+  border: 1px solid var(--desktop-text); /* Borda mais discreta */
+  border-radius: 8px; /* Cantos arredondados como ícone */
+  box-shadow: none; /* Sem sombra para parecer mais um ícone */
+  width: 80px; /* Tamanho fixo para ícone */
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Garante que o texto não vaze */
+  text-align: center;
+  cursor: grab;
+  color: var(--desktop-text); /* Cor do texto do ícone */
+}
+
+.window-minimized .window-header {
+  /* Cabeçalho do ícone minimizado */
+  background: transparent; /* Transparente */
+  border-bottom: none; /* Sem borda inferior */
+  padding: 5px;
+  cursor: grab;
+  width: 100%;
+  height: 100%;
+  flex-direction: column; /* Texto e ícone empilhados */
+  justify-content: center;
+  align-items: center;
+}
+
+.window-minimized .window-header span {
+  font-size: 0.8em; /* Texto menor */
+  font-weight: normal;
+  white-space: nowrap; /* Evita quebra de linha */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adiciona '...' se o texto for muito longo */
+}
+
+.window-minimized .window-controls {
+  display: none; /* Esconde os botões de controle quando minimizado */
+}
+
+/* Opcional: Estilo para o ícone dentro do título quando minimizado */
+.window-minimized .window-header span::before {
+  content: '📁'; /* Adiciona um ícone de pasta antes do texto */
+  display: block;
+  font-size: 2em;
+  margin-bottom: 5px;
 }

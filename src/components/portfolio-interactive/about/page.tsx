@@ -69,7 +69,7 @@ export default function About() {
                         </div>
 
                         {/* Experiência */}
-                        <div className={styles.card}>
+                        {/* <div className={styles.card}>
                             <h3 className={styles.heading}>💼 Experiência</h3>
                             <ul className={styles.experienceList}>
                                 <li>
@@ -98,10 +98,10 @@ export default function About() {
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
 
                         {/* Skills */}
-                        <div className={styles.card}>
+                        {/* <div className={styles.card}>
                             <h3 className={styles.heading} style={{ marginBottom: "1rem" }}>
                                 🚀 Skills
                             </h3>
@@ -152,7 +152,7 @@ export default function About() {
                                     </span>
                                 ))}
                             </div>
-                        </div>
+                        </div> */}
                     </motion.div>
                 </div>
             </div>

@@ -138,7 +138,7 @@ export function Contact() {
                       onChange={handleChange}
                       placeholder="Seu nome"
                       required
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-colors placeholder-[var(--text-primary)]"
                     />
                   </div>
                   <div className="space-y-2">
@@ -153,7 +153,7 @@ export function Contact() {
                       onChange={handleChange}
                       placeholder="seu@email.com"
                       required
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-colors placeholder-[var(--text-primary)]"
                     />
                   </div>
                 </div>
@@ -169,7 +169,7 @@ export function Contact() {
                     onChange={handleChange}
                     placeholder="Assunto da mensagem"
                     required
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-colors placeholder-[var(--text-primary)]"
                   />
                 </div>
                 <div className="space-y-2">
@@ -184,7 +184,7 @@ export function Contact() {
                     placeholder="Sua mensagem"
                     rows={5}
                     required
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent resize-none transition-colors"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent resize-none transition-colors placeholder-[var(--text-primary)]"
                   ></textarea>
                 </div>
                 <button

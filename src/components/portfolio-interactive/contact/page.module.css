@@ -3,56 +3,45 @@
 .contactContainer {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Espaçamento entre os links de contato */
-    padding: 1.5rem; /* Um pouco mais de padding no container */
-    background-color: var(--surface); /* Fundo do container geral */
-    border: 1px solid var(--surface-border); /* Borda sutil */
-    border-radius: 0.75rem; /* Bordas arredondadas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra suave */
-    color: var(--text-primary); /* Cor de texto padrão */
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    color: var(--text-primary);
 }
 
 .contactLink {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Espaçamento entre ícone e texto */
-    padding: 1rem 1.25rem; /* Padding interno para o "botão" */
-    border-radius: 0.6rem; /* Bordas arredondadas para o link */
-    text-decoration: none; /* Remover sublinhado padrão */
-    font-size: 1.1rem; /* Tamanho da fonte do texto do link */
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    font-size: 1.1rem;
     font-weight: 500;
-    color: var(--text-primary); /* Cor do texto do link padrão */
-    background-color: var(--desktop-bg); /* Um fundo sutil para o item, como um card */
-    border: 1px solid var(--surface-border); /* Borda para o item */
-    transition: all 0.2s ease-in-out; /* Transição para todas as propriedades relevantes */
-    cursor: pointer; /* Indica que é clicável */
+    color: var(--text-primary);
+    background-color: var(--desktop-bg);
+    border: 1px solid var(--surface-border);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .contactLink:hover {
-    background-color: var(--accent); /* Fundo preenchido com a cor de destaque no hover */
-    color: var(--window-header-text); /* Texto branco para alto contraste no hover */
-    border-color: var(--accent); /* Borda com a cor de destaque no hover */
-    transform: translateY(-2px); /* Leve elevação no hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada no hover */
+    background-color: var(--accent);
+    color: var(--window-header-text);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Cor do ícone no estado normal */
 .contactIcon {
-    font-size: 1.5rem; /* Tamanho do ícone um pouco maior */
-    color: var(--accent); /* Cor padrão do ícone: accent */
+    font-size: 1.5rem;
+    color: var(--accent);
     transition: color 0.2s ease-in-out;
 }
 
-/* Cor do ícone no hover do link */
 .contactLink:hover .contactIcon {
-    color: var(--window-header-text); /* Cor branca do ícone no hover para combinar com o texto */
+    color: var(--window-header-text);
 }
-
-/* Cores específicas para os ícones, se desejar substituir o --accent */
-/* Exemplo: */
-/* .iconMail { color: #D44638; } */
-/* .iconGithub { color: #211F1F; } */
-/* .iconLinkedin { color: #0A66C2; } */
-
-/* Você pode usar variáveis para estas cores também no root e dark-mode se quiser que mudem com o tema */
-/* Por exemplo: var(--icon-mail-color), var(--icon-github-color) */

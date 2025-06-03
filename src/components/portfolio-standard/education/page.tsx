@@ -113,13 +113,13 @@ export function Education() {
             {education.map((edu, index) => (
               <div
                 key={edu.id}
-                className={`bg-card dark:bg-card/80 p-6 rounded-xl shadow-md hover:shadow-xl dark:shadow-black/30 transition-all duration-500 transform hover:-translate-y-2 subtle-border ${
+                className={`rounded-xl shadow-[0_4px_20px_var(--shadow)] hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 subtle-border ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
                 style={{ transitionDelay: `${300 + index * 150}ms` }}
               >
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
-                  <div className="flex-1">
+                  <div className="flex-1 p-5">
                     <div className="flex items-start gap-4 mb-4">
                       <div className="bg-primary/10 dark:bg-primary/20 p-3 rounded-full text-primary dark:text-primary animate-pulse-slow">
                         <GraduationCap className="h-6 w-6" />

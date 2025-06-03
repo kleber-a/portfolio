@@ -1,9 +1,7 @@
-/* Education.module.css */
-
 .educationSection {
-    padding: 3rem 1rem; /* Padding da seção */
-    background-color: var(--background); /* Fundo da seção */
-    color: var(--text-primary); /* Cor de texto padrão */
+    padding: 3rem 1rem;
+    background-color: var(--background);
+    color: var(--text-primary);
 }
 
 .educationContainer {
@@ -11,7 +9,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Espaçamento entre os cards de formação */
+    gap: 1.5rem;
 }
 
 .educationTitle {
@@ -23,33 +21,33 @@
 }
 
 .educationHighlight {
-    color: var(--accent); /* Destaque no título */
+    color: var(--accent);
 }
 
 .educationCard {
     padding: 1.5rem;
     border-radius: 0.75rem;
-    background-color: var(--surface); /* Fundo do card */
-    border: 1px solid var(--surface-border); /* Borda do card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-    display: flex; /* Para alinhar ícone e conteúdo */
-    align-items: flex-start; /* Alinha o ícone no topo */
-    gap: 1rem; /* Espaçamento entre o ícone e o texto */
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
 .educationCard:hover {
-    transform: translateY(-3px); /* Elevação no hover */
-    background-color: var(--button-hover-bg); /* Fundo no hover */
-    border-color: var(--accent-hover); /* Borda no hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    transform: translateY(-3px);
+    background-color: var(--button-hover-bg);
+    border-color: var(--accent-hover);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .iconWrapper {
-    flex-shrink: 0; /* Previne que o ícone diminua */
-    font-size: 2.2rem; /* Tamanho do ícone */
-    color: var(--accent); /* Cor do ícone de destaque */
-    margin-top: 0.2rem; /* Pequeno ajuste vertical */
+    flex-shrink: 0;
+    font-size: 2.2rem;
+    color: var(--accent);
+    margin-top: 0.2rem;
 }
 
 .cardContent {
@@ -59,7 +57,7 @@
 }
 
 .degree {
-    font-size: 1.25rem; /* Título do curso/grau */
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 0.25rem;
@@ -68,18 +66,18 @@
 .institution {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--text-secondary); /* Cor da instituição */
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
 }
 
 .period {
     font-size: 0.875rem;
-    color: var(--text-secondary); /* Cor do período */
+    color: var(--text-secondary);
     margin-bottom: 0.75rem;
 }
 
 .details {
     font-size: 0.95rem;
-    color: var(--text-primary); /* Cor dos detalhes */
+    color: var(--text-primary);
     line-height: 1.5;
 }

@@ -1,13 +1,16 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import { Briefcase, Calendar, MapPin, ExternalLink, ChevronRight } from "lucide-react"
+import { useTheme } from '@/context/ThemeContext'
 
 export function Experience() {
   const sectionRef = useRef<HTMLElement>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const { theme } = useTheme();
 
   useEffect(() => {
+    console.log('theme',theme)
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -115,7 +118,8 @@ export function Experience() {
                 </div>
 
                 <div className={`ml-16 md:ml-0 ${index % 2 === 0 ? "md:mr-1/2 md:pr-8" : "md:ml-1/2 md:pl-8"}`}>
-                  <div className="p-6 rounded-xl shadow-md hover:shadow-xl dark:shadow-black/30 transition-all duration-500 transform hover:-translate-y-2">
+                  <div
+                  className="p-6 rounded-xl shadow-[0_4px_20px_var(--shadow)] hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
 
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
                       <div className="flex-1">

@@ -156,7 +156,7 @@ export function Skills() {
           {skills.map((skillCategory, index) => (
             <div
               key={index}
-              className={`p-6 rounded-xl shadow-md hover:shadow-xl dark:shadow-black/30 transition-all duration-500 transform hover:-translate-y-2 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              className={`p-6 rounded-xl shadow-[0_4px_10px_var(--shadow)] hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
               style={{ transitionDelay: `${150 * index}ms` }}
             >
@@ -215,7 +215,7 @@ export function Skills() {
               .map((skill, index) => (
                 <div
                   key={index}
-                  className={`relative p-6 rounded-xl shadow-md hover:shadow-xl dark:shadow-black/30 transition-all duration-500 transform hover:-translate-y-2 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                  className={`relative p-6 rounded-xl shadow-[0_4px_10px_var(--shadow)] transition-all duration-500 transform hover:-translate-y-2 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                     }`}
                   style={{
                     animationDelay: `${index * 0.1}s`,

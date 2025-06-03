@@ -40,7 +40,7 @@ export function Projects() {
       tags: ["Next", "React", "TypeScript"],
       categories: ["angular", "fullstack", "frontend", "backend"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/kleber-a/fin-wallet",
       featured: true,
     },
     {
@@ -50,8 +50,8 @@ export function Projects() {
       image: "/projects/computerStore.png?height=400&width=600",
       tags: ["Angular", "TypeScript"],
       categories: ["next", "frontend"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://kleber-a.github.io/computer-store/produtos",
+      githubUrl: "https://github.com/kleber-a/computer-store",
       featured: false,
     },
     {
@@ -61,8 +61,8 @@ export function Projects() {
       image: "/projects/gameDaily.png?height=400&width=600",
       tags: ["Next", "React", "TypeScript"],
       categories: ["next", "frontend"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://game-daily.vercel.app/",
+      githubUrl: "https://github.com/kleber-a/gameDaily",
       featured: false,
     },
     {
@@ -72,8 +72,8 @@ export function Projects() {
       image: "/projects/system.gif?height=400&width=600",
       tags: ["React", "Firebase", "JavaScript"],
       categories: ["react", "fullstack", "frontend", "backend"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://calling-system-gilt.vercel.app/",
+      githubUrl: "https://github.com/kleber-a/calling-system",
       featured: false,
     },
     {
@@ -83,8 +83,8 @@ export function Projects() {
       image: "/projects/pokeDex.png?height=400&width=600",
       tags: ["Angular", "TypeScript"],
       categories: ["angular", "frontend"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://pokedex-angular-eight-delta.vercel.app/",
+      githubUrl: "https://github.com/kleber-a/pokedex-angular",
       featured: false,
     },
      {

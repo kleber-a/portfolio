@@ -2,8 +2,8 @@
 
 .section {
     padding: 4rem 1rem;
-    background-color: var(--background); /* Usando a variável de background */
-    color: var(--text-primary); /* Cor do texto principal */
+    background-color: var(--background);
+    color: var(--text-primary);
 }
 
 .container {
@@ -17,11 +17,11 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--text-primary); /* Cor do título */
+    color: var(--text-primary);
 }
 
 .titleHighlight {
-    color: var(--accent); /* Cor de destaque para o título */
+    color: var(--accent);
 }
 
 .titleMd {
@@ -42,8 +42,8 @@
 }
 
 .card {
-    background-color: var(--surface); /* Cor de fundo dos cartões */
-    border: 1px solid var(--surface-border); /* Borda sutil nos cartões */
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
     border-radius: 0.75rem;
     padding: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -62,7 +62,7 @@
     height: 150px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid var(--accent); /* Borda na imagem de perfil */
+    border: 3px solid var(--accent);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -71,13 +71,13 @@
     font-weight: 600;
     text-align: center;
     margin-bottom: 0.5rem;
-    color: var(--text-primary); /* Cor do nome */
+    color: var(--text-primary);
 }
 
 .subtitle {
     font-size: 1rem;
     text-align: center;
-    color: var(--text-secondary); /* Cor do subtítulo */
+    color: var(--text-secondary);
     margin-bottom: 2rem;
 }
 
@@ -85,19 +85,19 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--text-primary); /* Cor dos cabeçalhos */
+    color: var(--text-primary);
 }
 
 .paragraph {
     font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 1rem;
-    color: var(--text-primary); /* Cor do parágrafo */
+    color: var(--text-primary);
 }
 
 .paragraphStrong {
     font-weight: 600;
-    color: var(--accent); /* Destaque em parágrafos */
+    color: var(--accent);
 }
 
 .experienceList {
@@ -112,13 +112,13 @@
 .experienceItemTitle {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--accent); /* Cor do título da experiência */
+    color: var(--accent);
     margin-bottom: 0.5rem;
 }
 
 .experienceItemDesc p {
     font-size: 1rem;
-    color: var(--text-secondary); /* Cor da descrição da experiência */
+    color: var(--text-secondary);
     margin-bottom: 0.25rem;
 }
 
@@ -129,8 +129,8 @@
 }
 
 .skillBadge {
-    background-color: var(--accent-hover); /* Cor de fundo dos badges de skill */
-    color: var(--window-header-text); /* Cor do texto dos badges, normalmente branco para contraste */
+    background-color: var(--accent-hover);
+    color: var(--window-header-text);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     font-size: 0.9rem;
@@ -145,8 +145,8 @@
 
 .contactButton {
     display: inline-block;
-    background-color: var(--accent); /* Cor de fundo do botão de contato */
-    color: var(--window-header-text); /* Cor do texto do botão, geralmente branco */
+    background-color: var(--accent);
+    color: var(--window-header-text);
     padding: 1rem 2rem;
     border-radius: 0.75rem;
     font-size: 1.25rem;
@@ -156,5 +156,5 @@
 }
 
 .contactButton:hover {
-    background-color: var(--accent-hover); /* Cor de hover do botão */
+    background-color: var(--accent-hover);
 }

@@ -2,21 +2,25 @@
 
 import { useTheme } from '@/context/ThemeContext';
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Maximize, Minimize } from 'lucide-react'; // Importe os novos ícones
-import styles from './page.module.css'; // Importe o CSS Modules
+import { Sun, Moon, Maximize, Minimize, ToggleLeft, ToggleRight, Computer, ClipboardList } from 'lucide-react';
+import { useRouter, usePathname } from 'next/navigation';
+import styles from './page.module.css';
 
 const Header: React.FC = () => {
   const [currentTime, setCurrentTime] = useState<string>('');
   const [currentDate, setCurrentDate] = useState<string>('');
-  const { theme, toggleTheme } = useTheme(); // Obter o tema atual para o ícone
-  const [isFullScreen, setIsFullScreen] = useState<boolean>(false); // Estado para fullscreen
+  const { theme, toggleTheme } = useTheme();
+  const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
   const [mounted, setMounted] = useState(false);
+
+  const router = useRouter();
+  const pathname = usePathname();
+  const isInteractive = pathname.includes('portfolio-interactive');
 
   useEffect(() => {
     const updateDateTime = () => {
       const now = new Date();
-      // Use 'pt-BR' para formato de data/hora mais familiar se for o caso
-      const timeOptions: Intl.DateTimeFormatOptions = { hour: '2-digit', minute: '2-digit', hour12: false }; // 24h format
+      const timeOptions: Intl.DateTimeFormatOptions = { hour: '2-digit', minute: '2-digit', hour12: false };
       setCurrentTime(now.toLocaleTimeString('pt-BR', timeOptions));
 
       const dateOptions: Intl.DateTimeFormatOptions = { weekday: 'short', month: 'short', day: 'numeric' };
@@ -30,7 +34,6 @@ const Header: React.FC = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  // Função para alternar tela cheia
   const toggleFullScreen = () => {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen().then(() => {
@@ -47,27 +50,31 @@ const Header: React.FC = () => {
     }
   };
 
+  const handleSwitch = () => {
+    if (isInteractive) {
+      router.push('/portfolio-standard');
+    } else {
+      router.push('/portfolio-interactive');
+    }
+  };
+
   return (
     <header className={styles.header}>
-      {/* Lado Esquerdo */}
+
       <div className={styles.leftSection}>
         <button className={`${styles.button} ${styles.activitiesButton}`}>
           Activities
         </button>
       </div>
 
-      {/* Centro - Relógio */}
       <div className={styles.centerSection}>
         <span className={styles.dateTime}>
           {currentDate} {currentTime}
         </span>
       </div>
 
-      {/* Lado Direito */}
       <div className={styles.rightSection}>
-        {/* Botão de Modo Noturno/Claro */}
         {mounted && (
-
           <button onClick={toggleTheme} className={`${styles.button} ${styles.iconButton}`}>
             {theme === 'dark' ? (
               <Moon className={styles.themeIcon} />
@@ -77,7 +84,6 @@ const Header: React.FC = () => {
           </button>
         )}
 
-        {/* Botão de Fullscreen */}
         <button onClick={toggleFullScreen} className={`${styles.button} ${styles.iconButton}`}>
           {isFullScreen ? (
             <Minimize className={styles.fullscreenIcon} />
@@ -86,19 +92,12 @@ const Header: React.FC = () => {
           )}
         </button>
 
-        {/* Ícones existentes (Ajustados para usar as classes de estilo) */}
-        <span className={`${styles.button} ${styles.iconButton}`}>
-          📶
-        </span>
-        <span className={`${styles.button} ${styles.iconButton}`}>
-          🔋
-        </span>
-        <span className={`${styles.button} ${styles.iconButton}`}>
-          🔊
-        </span>
-        <span className={`${styles.button} ${styles.iconButton}`}>
-          ▼
-        </span>
+        <div className='flex items-center justify-center rounded-md border-1 px-4'>
+          <button onClick={handleSwitch} className={`${styles.button} ${styles.iconButton}`}>
+            <ClipboardList className="h-5 w-5" />
+          </button>
+          <span className="text-[12px]">Portfólio clássico</span>
+        </div>
       </div>
     </header>
   );

@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Code, ToggleLeft, ToggleRight } from "lucide-react"
+import { Menu, X, Code, ToggleLeft, ToggleRight, Computer } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
 import { useRouter } from "next/navigation"
 
@@ -62,13 +62,13 @@ export function Header({ onSectionChange, activeSection }: { onSectionChange: (s
             </button>
           ))}
 
-          {/* <button
+          <button
             onClick={handleSwitch}
             className="flex items-center gap-2 border rounded-full px-4 py-2 hover:shadow-lg transition-all"
           >
-            {isSwitched ? <ToggleRight className="h-5 w-5" /> : <ToggleLeft className="h-5 w-5" />}
-            <span>{isSwitched ? "Página 2" : "Página 1"}</span>
-          </button> */}
+            <Computer className="h-5 w-5" />
+            <span>Portfólio Interativo</span>
+          </button>
 
           <ThemeToggle />
         </nav>
@@ -76,13 +76,13 @@ export function Header({ onSectionChange, activeSection }: { onSectionChange: (s
         {/* Mobile Menu Button */}
         <div className="flex items-center gap-4 md:hidden">
           <ThemeToggle />
-          {/* <button
+          <button
             className="p-2 rounded-full transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button> */}
+          </button>
         </div>
       </div>
 
@@ -90,61 +90,21 @@ export function Header({ onSectionChange, activeSection }: { onSectionChange: (s
       {isMenuOpen && (
         <div className="md:hidden py-4 px-4 backdrop-blur-md border-b border-border">
           <nav className="flex flex-col space-y-4">
-            <MobileNavLink href="#sobre" onClick={() => setIsMenuOpen(false)} isActive={activeSection === "sobre"}>
-              Sobre
-            </MobileNavLink>
-            <MobileNavLink
-              href="#habilidades"
-              onClick={() => setIsMenuOpen(false)}
-              isActive={activeSection === "habilidades"}
+             {routes.map(({ id, label }) => (
+            <button
+              key={id}
+              onClick={() => handleClick(id)}
+              className={`pb-1 transition-all ${activeSection === id
+                  ? "font-bold border-b-2 border-[var(--text-primary)]"
+                  : "font-normal border-b-2 border-transparent hover:border-[var(--text-primary)]"
+                }`}
             >
-              Habilidades
-            </MobileNavLink>
-            <MobileNavLink
-              href="#projetos"
-              onClick={() => setIsMenuOpen(false)}
-              isActive={activeSection === "projetos"}
-            >
-              Projetos
-            </MobileNavLink>
-            <MobileNavLink href="#contato" onClick={() => setIsMenuOpen(false)} isActive={activeSection === "contato"}>
-              Contato
-            </MobileNavLink>
+              {label}
+            </button>
+          ))}
           </nav>
         </div>
       )}
     </header>
-  )
-}
-
-function NavLink({ href, isActive, children }: { href: string; isActive: boolean; children: React.ReactNode }) {
-  return (
-    <Link
-      href={href}
-    >
-      {children}
-      {isActive && <span className="absolute -bottom-1 left-0 w-full h-0.5"></span>}
-    </Link>
-  )
-}
-
-function MobileNavLink({
-  href,
-  onClick,
-  isActive,
-  children,
-}: {
-  href: string
-  onClick: () => void
-  isActive: boolean
-  children: React.ReactNode
-}) {
-  return (
-    <Link
-      href={href}
-      onClick={onClick}
-    >
-      {children}
-    </Link>
   )
 }

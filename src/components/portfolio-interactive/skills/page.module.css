@@ -1,46 +1,39 @@
-/* Skills.module.css */
-
 .skillsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Mais responsivo */
-    gap: 1rem; /* Espaçamento entre os itens */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
     padding: 1rem;
-    background-color: var(--surface); /* Fundo dos skills card */
-    border: 1px solid var(--surface-border); /* Borda */
-    border-radius: 0.75rem; /* Bordas arredondadas */
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 0.75rem;
 }
 
 .skillItem {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.75rem; /* Espaçamento entre ícone e texto */
-    padding: 0.75rem 1rem; /* Padding dentro do item */
-    background-color: var(--surface); /* Fundo do item individual */
-    border: 1px solid var(--surface-border); /* Borda do item */
-    border-radius: 0.5rem; /* Bordas arredondadas para o item */
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 0.5rem;
     transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-    color: var(--text-primary); /* Cor do texto do skill */
+    color: var(--text-primary);
 }
 
 .skillItem:hover {
-    transform: translateY(-3px); /* Efeito de elevação sutil no hover */
-    background-color: var(--button-hover-bg); /* Fundo no hover */
-    border-color: var(--accent-hover); /* Borda no hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave no hover */
+    transform: translateY(-3px);
+    background-color: var(--button-hover-bg);
+    border-color: var(--accent-hover);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .skillIcon {
-    font-size: 1.8rem; /* Tamanho do ícone */
-    /* A cor do ícone será definida inline no componente para maior controle */
+    font-size: 1.8rem;
 }
 
 .skillName {
-    font-size: 0.95rem; /* Tamanho do texto do skill */
+    font-size: 0.95rem;
     font-weight: 500;
-    white-space: nowrap; /* Evita quebra de linha em nomes longos */
+    white-space: nowrap;
 }
-
-/* Cores específicas para os ícones (se necessário personalizar além das variáveis) */
-/* Exemplo: Se você quiser que o ícone do HTML seja sempre um tom de laranja específico */
-/* .iconHtml { color: #E44D26; } */

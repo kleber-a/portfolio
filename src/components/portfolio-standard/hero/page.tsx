@@ -60,19 +60,19 @@ export function Hero({ onSectionChange }: { onSectionChange: (section: string) =
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
           }`}
         >
-          <Link
-            href="#projetos"
+          <button
+            onClick={() => handleClick('projetos')}
             className="px-8 py-3 rounded-full font-medium transition-all hover:shadow-lg hover:-translate-y-1"
           >
             <span className="relative z-10">Ver Projetos</span>
-          </Link>
+          </button>
 
-          <Link
-            href="#contato"
+          <button
+            onClick={() => handleClick('contato')}
             className="px-8 py-3 rounded-full border font-medium transition-all hover:shadow-lg hover:-translate-y-1"
           >
             <span className="relative z-10">Entre em Contato</span>
-          </Link>
+          </button>
         </div>
 
         <div

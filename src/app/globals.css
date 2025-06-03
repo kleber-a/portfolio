@@ -88,6 +88,7 @@ body {
 
   --header-fixed-bg: rgba(30, 0, 60, 0.9); /* Um roxo bem escuro/índigo profundo, semi-transparente */
   --header-fixed-text: #f0f0f0;
+  --shadow: #aaaaaa;
 }
 /* 🌙 Dark Mode — Noturno e Elegante */
 body.dark-mode {
@@ -115,6 +116,7 @@ body.dark-mode {
 
   --header-fixed-bg: rgba(30, 0, 60, 0.9); /* Exatamente o mesmo tom de roxo profundo */
   --header-fixed-text: #f0f0f0;
+  --shadow: #3f3f3f;
 }
 
 /* Aplica as variáveis em seus seletores */

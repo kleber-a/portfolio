@@ -7,7 +7,7 @@ export default function Education() {
             degree: "Bacharelado em Ciência da Computação",
             institution: "Universidade Centro Universitário Maurício de Nassau",
             period: "2019 - 2022",
-            details: "Foco em desenvolvimento de software, algoritmos e estruturas de dados. Projeto final: Sistema de Gerenciamento de Biblioteca."
+            details: "Foco em desenvolvimento de software, algoritmos e estruturas de dados."
         }
     ];
 
